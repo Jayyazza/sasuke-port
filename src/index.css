@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes lightning {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.lightning {
+  animation: lightning 1.5s infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spinSlow 14s linear infinite;
+}
+
+.lightning-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+
+  background: conic-gradient(#7f1dff,
+      #38bdf8,
+      #7f1dff,
+      #38bdf8,
+      #7f1dff);
+
+  filter: blur(6px);
+  animation: lightning-spin 2.5s linear infinite,
+    lightning 1.2s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* glow tambahan biar kelihatan jelas */
+.lightning-border {
+  box-shadow:
+    0 0 25px rgba(127, 29, 255, 0.8),
+    0 0 45px rgba(56, 189, 248, 0.6);
+}
+
+@keyframes scan {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
