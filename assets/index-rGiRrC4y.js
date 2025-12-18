@@ -115,7 +115,7 @@ Error generating stack: `+a.message+`
                                     opacity-0\r
                                     group-hover:opacity-100\r
                                     transition\r
-                                `}),C.jsx("img",{src:"/sharingan.png",alt:"Sharingan",className:`\r
+                                `}),C.jsx("img",{src:"sharingan.png",alt:"Sharingan",className:`\r
                                     absolute bottom-4 right-4\r
                                     w-10 h-10\r
                                     opacity-0\r
